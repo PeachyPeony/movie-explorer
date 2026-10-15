@@ -28,17 +28,36 @@ function MovieDetails() {
 
             <section className="movie-details">
                 <p className="eyebrow">YOUR NEXT ADVENTURE AWAITS</p>
-                <h1>{movie.title}</h1>
 
-                <div classname="movie-meta">
-                    <span>{movie.year}</span>
-                    <span className="movie-rating">★ {movie.rating}</span>
+                <div className="movie-details-layout">
+                    <div className="details-poster">
+                        {movie.poster ? (
+                            <img
+                                src={movie.poster}
+                                alt={`Poster for ${movie.title}`} />
+                        ) : (
+                            <div className="poster-placeholder">
+                                <span>✧</span>
+                                <p>Poster coming soon</p>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="details-info">
+                        <h1>{movie.title}</h1>
+
+
+                        <div className="movie-meta">
+                            <span>{movie.year}</span>
+                            <span className="movie-rating">★ {movie.rating}</span>
+                        </div>
+
+                        <p className="movie-overview">{movie.overview}</p>
+                        <Link className="discover-button" to="/">
+                            Back to Discover films
+                        </Link>
+                    </div>
                 </div>
-
-                <p className="movie-overview">{movie.overview}</p>
-                <Link className="discover-button" to="/">
-                    Back to Discover films
-                </Link>
             </section>
         </main>
     )

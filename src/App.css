@@ -175,6 +175,60 @@ main {
   white-space: nowrap;
 }
 
+.movie-details {
+  max-width: 760px;
+  padding: 100px 0 80px;
+}
+
+.movie-details h1 {
+  margin: 0 0 20px;
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.movie-details-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.details-poster {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background-color: #202747;
+  border: 1px solid #383354;
+}
+
+.details-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-info {
+  min-width: 0;
+}
+
+.details-info h1 {
+  margin-top: 0;
+}
+
+.movie-details .movie-meta {
+  justify-content: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.movie-overview {
+  margin: 0 0 32px;
+  color: #a7aec9;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
 @media (max-width: 600px) {
   main {
     padding: 0 20px;
@@ -207,5 +261,15 @@ main {
   .movie-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .movie-details-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .details-poster {
+    width: 100%;
+    max-width: 280px;
   }
 }
