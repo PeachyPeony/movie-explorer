@@ -1,7 +1,45 @@
+import { useParams, Link } from 'react-router-dom'
+import { movies } from '../data/movies'
+
 function MovieDetails() {
+    const { id } = useParams()
+
+    const movie = movies.find((movie) => movie.id === Number(id))
+
+    if (!movie) {
+        return (
+            <main>
+                <h1>Movie not found</h1>
+                <Link to="/">Back to Discover films</Link>
+            </main>
+        )
+    }
+
     return (
         <main>
-            <h1>Movie details</h1>
+            <header className="site-header">
+                <Link className="site-logo" to="/">
+                    ☾ The Otherworld
+                </Link>
+                <nav>
+                    <Link to="/">Discover films</Link>
+                </nav>
+            </header>
+
+            <section className="movie-details">
+                <p className="eyebrow">YOUR NEXT ADVENTURE AWAITS</p>
+                <h1>{movie.title}</h1>
+
+                <div classname="movie-meta">
+                    <span>{movie.year}</span>
+                    <span className="movie-rating">★ {movie.rating}</span>
+                </div>
+
+                <p className="movie-overview">{movie.overview}</p>
+                <Link className="discover-button" to="/">
+                    Back to Discover films
+                </Link>
+            </section>
         </main>
     )
 }

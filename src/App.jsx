@@ -1,8 +1,10 @@
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import { movies } from './data/movies'
 import MovieCard from './components/MovieCard'
+import MovieDetails from './pages/MovieDetails'
 
-function App() {
+function Home() {
   return (
     <main>
       <header className="site-header">
@@ -38,6 +40,15 @@ function App() {
         </div>
       </section>
     </main>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/movies/:id" element={<MovieDetails />} />
+    </Routes>
   )
 }
 
