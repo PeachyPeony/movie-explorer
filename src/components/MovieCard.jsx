@@ -18,7 +18,6 @@ function MovieCard({ movie }) {
                     <h3>{movie.title}</h3>
                     <div className="movie-meta">
                         <span>{movie.year}</span>
-                        <span className="movie-rating">★ {movie.rating}</span>
                     </div>
                 </div>
             </article>

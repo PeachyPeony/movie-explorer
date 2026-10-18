@@ -1,16 +1,19 @@
-# React + Vite
+# The Otherworld ☾
+A celestial fantasy movie discovery app featuring a curated collection of fantastical films. 
+Explore the collection and discover more about each movie through its own detail page.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Browse a curated collection of fantasy films.
+- View movie details, including release year and overview. 
+- Navigate between the movie collection and individual detail pages.
+- Responsive layout designed for mobile, tablet, and desktop screens.
+- Reusable React components and locally stored movie data.
 
-Currently, two official plugins are available:
+## Built with
+- React
+- JavaScript
+- HTML5
+- CSS3
+- React Router
+- Vite 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

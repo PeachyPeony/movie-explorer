@@ -49,7 +49,6 @@ function MovieDetails() {
 
                         <div className="movie-meta">
                             <span>{movie.year}</span>
-                            <span className="movie-rating">★ {movie.rating}</span>
                         </div>
 
                         <p className="movie-overview">{movie.overview}</p>
